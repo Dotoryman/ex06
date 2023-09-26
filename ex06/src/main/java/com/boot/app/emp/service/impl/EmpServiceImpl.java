@@ -11,24 +11,23 @@ import com.boot.app.emp.service.EmpVO;
 
 @Service
 public class EmpServiceImpl implements EmpService{
-	
+
 	@Autowired
 	EmpMapper empMapper;
 	
-	// 전체조회
 	@Override
-	public List<EmpVO> getEmpList() {
-		return empMapper.selectAllEmp();
+	public EmpVO getEmp(EmpVO empVO) {
+		return empMapper.getEmp(empVO);
 	}
-	//단건조회
+
 	@Override
-	public EmpVO getEmp(EmpVO emp) {
-		return empMapper.selectEmpInfo(emp);
+	public List<EmpVO> getEmpList(EmpVO empVO) {
+		return empMapper.getEmpList(empVO);
 	}
-	//등록
+
 	@Override
-	public int insertEmp(EmpVO emp) {
-		return empMapper.insertEmpInfo(emp);
+	public void empInsert(EmpVO empVO) {
+		empMapper.empInsert(empVO);
 	}
 
 }

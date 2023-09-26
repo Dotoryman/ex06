@@ -5,6 +5,30 @@
 <title>전체 사원 조회</title>
 </head>
 <body>
-	<p th:text="${empList[0].firstName}" />
+	<div>
+		<button type="button" th:onclick="|location.href ='@{/empInsert}'|" th:text="등록"></button>
+		<table border="1">
+			<thead>
+				<tr>
+					<th>NO.</th>
+					<th>employee_id</th>
+					<th>first_name</th>
+					<th>job_id</th>
+					<th>hire_date</th>
+				</tr>
+			</thead>
+			<tbody>
+				<th:block th:each="empInfo, status : ${empList}">
+					<tr th:onclick ="|location.href='@{/empInfo(employeeId=${empInfo.employeeId})}'|">
+						<td th:text="${status.index}"/>
+						<td th:text="${empInfo.employeeId}"/>
+						<td>[[ ${empInfo.lastName} ]]</td>
+						<td th:text="${empInfo.jobId}"/>
+						<td>[[ ${ #dates.format(empInfo.hireDate, 'yyyy년MM월dd일') }]]</td>
+					</tr>
+				</th:block>
+			</tbody>
+		</table>
+	</div>
 </body>
 </html>

@@ -1,19 +1,24 @@
 package com.boot.app.emp.service;
 
-import java.util.Date;
+import java.sql.Date;
 
-import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.web.multipart.MultipartFile;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
 public class EmpVO {
-	private int employeeId;
-	private String firstName;
-	private String lastName;
-	private String email;
-	@DateTimeFormat(pattern = "yyyy-MM-dd")
-	private Date hireDate;
-	private String jobId;
-	private int departmentId;
+	String employeeId;
+	String firstName;
+	String lastName;
+	String email;
+	Date   hireDate;
+	String managerId;
+	int    salary;
+	String jobId;
+	String departmentId;
+	String profile;
+	MultipartFile uploadFile;
 }
