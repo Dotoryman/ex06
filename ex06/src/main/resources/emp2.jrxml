@@ -3,7 +3,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="emp2" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="347d9634-6457-40e2-89b0-1b5dafeb7f52">
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="hr"/>
-	<style name="필드" hTextAlign="Center" vTextAlign="Middle" fontName="맑은 고딕" fontSize="14">
+	<style name="필드" hTextAlign="Center" vTextAlign="Middle" fontName="godicjasper" fontSize="14">
 		<pen lineWidth="1.0"/>
 		<box leftPadding="0">
 			<pen lineWidth="0.5"/>
@@ -55,7 +55,7 @@ FROM "EMPLOYEES"]]>
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="16"/>
+					<font fontName="godicjasper" size="16"/>
 				</textElement>
 				<text><![CDATA[이달의 우수사원 목록]]></text>
 			</staticText>
